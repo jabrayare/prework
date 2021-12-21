@@ -20,15 +20,46 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        // Sets the title in the Navigation Bar
+        self.title = "Tip Calculator"
+        print("View loaded!")
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        print("View will Disapper")
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        
+        let defaults = UserDefaults.standard
+        let p1 = defaults.integer(forKey: "p1")
+        let p2 = defaults.integer(forKey: "p2")
+        let p3 = defaults.integer(forKey: "p3")
+        
+        print("p1: ", p1)
+        print("p2: ", p2)
+        print("p3: ", p3)
+        
+        tipControl.setTitle(String(p1)+"%", forSegmentAt: 0)
+        tipControl.setTitle(String(p2)+"%", forSegmentAt: 1)
+        tipControl.setTitle(String(p3)+"%", forSegmentAt: 2)
+
+    }
+    
 
     
     @IBAction func calculateTip(_ sender: Any) {
+        let defaults = UserDefaults.standard
+        let p1 = Double(defaults.integer(forKey: "p1"))
+        let p2 = Double(defaults.integer(forKey: "p2"))
+        let p3 = Double(defaults.integer(forKey: "p3"))
+        
         // Get bill amount from text field input
         let bill = Double(billAmountTextField.text!) ?? 0
 
         // Get total tip by multiplying tip * tipPercentage.
-        let tipPercentages = [0.15, 0.18, 0.20]
+        
+        let tipPercentages = [p1/100, p2/100, p3/100]
         let tip = bill * tipPercentages[tipControl.selectedSegmentIndex]
         let total = bill + tip
         
