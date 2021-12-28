@@ -1,6 +1,6 @@
-# Pre-work - *Name of App Here*
+# Pre-work - * Tip Calculator*
 
-** Tip Calculator.
+** Tip Calculator **.
 
 Submitted by: ** Jibril Mohamed **
 
