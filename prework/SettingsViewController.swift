@@ -19,15 +19,8 @@ class SettingsViewController: UIViewController {
 
         // Do any additional setup after loading the view.
     }
-    override func viewWillAppear(_ animated: Bool) {
-        print("Settings view will appear!")
-    }
-    override func viewDidDisappear(_ animated: Bool) {
-        print("Settings view did disappear!")
-    }
     override func viewWillDisappear(_ animated: Bool) {
         let defaults = UserDefaults.standard
-        print("Settings veiw will disapper!")
         let p1 = Double(p1TextField.text!) ?? 15
         let p2 = Double(p2TextField.text!) ?? 18
         let p3 = Double(p3TextField.text!) ?? 20

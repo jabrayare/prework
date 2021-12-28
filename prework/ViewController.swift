@@ -23,12 +23,9 @@ class ViewController: UIViewController {
         
         // Sets the title in the Navigation Bar
         self.title = "Tip Calculator"
-        print("View loaded!")
+        
     }
     
-    override func viewWillDisappear(_ animated: Bool) {
-        print("View will Disapper")
-    }
     override func viewWillAppear(_ animated: Bool) {
         
         let defaults = UserDefaults.standard
