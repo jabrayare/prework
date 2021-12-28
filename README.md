@@ -20,8 +20,8 @@ The following **optional** features are implemented:
 The following **additional** features are implemented:
 
 - ### List anything else that you can get done to improve the app functionality!
-- [ Done ] Implemented settings screen, where user can enter their own percentages.
-- [ Done ] The percentages entered by the users are updated in the main screen.
+- [ Done ] Implemented settings screen, where users can enter their own percentages.
+- [ Done ] The percentages entered by the user are updated in the main screen.
 
 ## Video Walkthrough
 
